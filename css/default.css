@@ -4,7 +4,7 @@
 body {
     margin: 0;
     padding: 0;
-    height: 98vh;
+    height: 100vh;
     width: 100vw;
     background: linear-gradient(to right, rgb(7, 7, 7), rgb(12, 12, 12)), url("../img/heartbg.png");
     background-size: cover;
@@ -45,6 +45,10 @@ canvas {
 
 #content {
     margin-top: 20px !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* flex-direction: column; */
 }
 
 #mainDiv {
@@ -54,7 +58,7 @@ canvas {
 }
 
 #loveHeart {
-    float: left;
+    /* float: left; */
     width: 670px;
     height: 620px;
     position: relative;
@@ -176,7 +180,9 @@ a {
     margin-top: 20px;
     text-align: center;
     width: 100%;
-    color: #8c8c8c
+    color: #8c8c8c;
+    position: fixed;
+    bottom: 20px;
 }
 
 #errorMsg {
@@ -193,3 +199,84 @@ a {
 }
 
 
+
+@media (max-width: 990px)  {
+
+    body {
+        height: 178vh;
+    }
+
+    #mainDiv {
+        display: grid;
+        place-items: center;
+        margin: 0 19px;
+    }
+
+    #content {
+        gap: 230px;
+        margin-left: 36px;
+        /* justify-content: center; */
+        width: unset !important;
+        height: unset !important;
+        margin-top: unset !important;
+        margin-left: unset !important;
+    }
+    #loveHeart {
+        /* float: left; */
+        width: 370px;
+        height: 350px;
+        position: relative;
+        backdrop-filter: blur(20px);
+        margin-right: 98px;
+        justify-self: flex-start;
+    }
+
+    #messages {
+        display: none;
+        margin-top: -101px;
+    }
+
+    #loveu {
+        width: 155px;
+        /* padding: 5px; */
+        font-size: 13px;
+        /* margin-top: 80px; */
+        /* margin-right: 120px; */
+        text-align: center;
+        /* color: #ade0ff; */
+        display: none;
+        position: absolute;
+        bottom: -77px;
+        left: 57%;
+        transform: translateX(-50%);
+        /* height: 187px; */
+    }
+
+    .msgbox {
+        display: flex;
+            flex-direction: column;
+            gap: 12px;
+    }
+
+    #elapseClock {
+        text-align: right;
+        font-size: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px
+    }
+
+    #words {
+        font-family: "sans-serif";
+        width: 200px;
+        font-size: 14px;
+        color: #f5a0a0;
+    }
+
+    #elapseClock .digit {
+        font-family: "digit";
+        font-size: 16px
+    }
+
+
+
+}
